@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.app-container {
+  display: flex;
+}
+.main-content {
+  flex: 1;
+  padding: 50px 20px;
+}
+.navbar {
+  flex: 0 0 20%;
+  padding: 50px 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: #f8f8f8;
+  justify-content: center;
+  align-items: center;
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  /* Add additional styling for hover effects, fonts, etc. */
+}
+
+a:hover {
+  background-color: #ddd;
+}
