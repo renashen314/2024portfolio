@@ -1,36 +1,74 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 html,
 body {
-  height: 100vh;
   font-family: "Nunito Sans", sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
+  height: 100%;
+  color: #065757;
 }
 h1 {
-  font-size: 36px;
+  font-size: 5.5rem;
+  font-weight: 400;
+  font-family: "Cormorant", "Icons";
+  line-height: 0.8;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.5rem;
   font-weight: 300;
-  font-family: "Cormorant", serif;
-  font-style: italic;
+  padding: 2rem 0 0 0;
+}
+h3 {
+  font-size: 1.25rem;
+  padding: 1.25rem 0 0 0;
+}
+.article p {
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 a {
   text-decoration: none;
   color: inherit;
 }
-
 a:hover {
-  background-color: #ddd;
+  background-color: rgb(222, 247, 195);
 }
-
+.flex {
+  display: flex;
+  gap: 20px;
+}
 .app-container {
   display: flex;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.page-container {
+  display: flex;
+}
+h3 img {
+  vertical-align: middle; /* Align the image vertically with the text */
+  margin-right: 8px; /* Space between the image and the text */
+  width: 24px; /* Set a specific width for the image */
+  height: auto; /* Maintain the aspect ratio */
+}
+.article {
+  flex: 1 0 auto;
+  padding: 8rem 40px 20px 40px;
+  margin-left: auto;
+  margin-right: 0;
+  width: 70%;
+  text-align: left;
+  line-height: 1.5;
+  justify-content: flex-start;
+  align-items: center;
 }
 .main-content {
   display: flex;
   flex: 1;
-  padding: 50px 20px;
+  padding: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -44,15 +82,14 @@ a:hover {
   height: 100%;
   justify-content: center;
   align-items: center;
-  color: darkslategray;
 }
 .navbar ul {
   list-style: none;
 }
-.navbar ul li a {
+.navbar a {
   font-size: 20px;
   display: block;
-  padding: 10px 24px;
+  padding: 10px 36px;
   text-decoration: none;
   /* Add additional styling for hover effects, fonts, etc. */
 }
@@ -61,27 +98,54 @@ a:hover {
   font-size: 20px;
   font-weight: 300;
 }
-.navbar .big-nav-button {
-  padding-bottom: 40px;
+.navbar .big-nav-button a {
+  padding-left: 0;
 }
 
-.external-link {
-  padding-top: 40px;
+.external-link a {
+  padding-left: 0;
 }
-.external-link h3 {
-  padding-top: 16px;
+.grid-column-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  max-width: 100%;
+}
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap; /* Wrap long lines */
+  word-wrap: break-word; /* Break long words */
 }
 
+code {
+  display: block;
+  max-width: 100%;
+}
+.image-placeholder {
+  flex: 1 0 auto;
+  width: 400px; /* Set the desired width */
+  height: 400px; /* Set the desired height */
+  background-color: #ccc; /* Light grey background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888; /* Text color for the placeholder text */
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
 /* fancy text styles */
 #text {
   max-width: inherit;
 }
-
 .offset-word {
   font-size: clamp(2rem, 5vw, 10rem);
   margin: 0rem;
   text-transform: uppercase;
   transition: opacity 250ms ease;
+}
+.highlight {
+  color: rgb(34, 185, 4);
 }
 .line {
   display: flex;
@@ -171,8 +235,40 @@ a:hover {
   to {
     transform: translateY(-0%);
   }
-
   50% {
     transform: translateY(-3%);
+  }
+}
+#blob {
+  background: linear-gradient(to right, aquamarine, mediumpurple);
+  opacity: 0.6;
+  animation: rotate 20s infinite;
+  height: 500px;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  z-index: -3;
+}
+#blur {
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(200px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    rotate: 360deg;
   }
 }

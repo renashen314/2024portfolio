@@ -47,11 +47,11 @@ export default function Home() {
             <p className="offset-word">Shen</p>
           </div>
           <div className="line">
-            <p className="offset-word">Frontend</p>
-            <p className="offset-word">&</p>
+            <p className="offset-word highlight">Frontend</p>
+            <p className="offset-word highlight">&</p>
           </div>
           <div className="line">
-            <p className="offset-word">software development</p>
+            <p className="offset-word highlight">software development</p>
           </div>
           <div className="line">
             <a
@@ -61,6 +61,7 @@ export default function Home() {
             >
               renashen@umich.edu
             </a>
+            <span className="offset-word">&#9786;</span>
           </div>
           <div className="line">
             <a
@@ -75,8 +76,9 @@ export default function Home() {
             <a
               id="medium-link"
               className="offset-word fancy"
-              href=""
+              href="https://medium.com/@renashen_28351"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span>&#10132;</span>Medium
             </a>

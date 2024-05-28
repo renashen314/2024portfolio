@@ -9,29 +9,45 @@ export default function Nav() {
       <h3>React & JS</h3>
       <ul>
         <li>
-          <Link to="/work">Work</Link>
-          <Link to="/work">Mapbox</Link>
+          <Link to="/notebook">
+            <span>&#128210;</span>Markdown Notebook
+          </Link>
+        </li>
+        <li>
+          <Link to="/nyc_park_map">
+            <span>&#128510;</span>NYC Park Map
+          </Link>
         </li>
       </ul>
       <h3>React Native</h3>
       <ul>
         <li>
-          <Link to="/">Uptap</Link>
+          <Link to="/uptap">
+            <span>&#128199;</span>Uptap
+          </Link>
         </li>
       </ul>
       <h3>Python</h3>
       <ul>
         <li>
-          <Link to="/">Media Dashboard</Link>
+          <Link to="/work">
+            <span>&#128202;</span>Media Dashboard
+          </Link>
         </li>
         <li>
-          <Link to="/">Music Show Recommendation</Link>
+          <Link to="/music_show_rec">
+            <span>&#127878;</span>Music Show Recommendation
+          </Link>
         </li>
       </ul>
-      <h3>Ruby on Rails</h3>
+      <div className="flex">
+        <h3>Ruby on Rails</h3>
+      </div>
       <ul>
         <li>
-          <Link to="/">WADS Team Project Management</Link>
+          <Link to="/work">
+            <span>&#128193;</span>Dev Team Project Management
+          </Link>
         </li>
       </ul>
       <h3 className="big-nav-button">
@@ -44,7 +60,7 @@ export default function Nav() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            LinkedIn<span>&#10132;</span>
+            LinkedIn <span>&#10132;</span>
           </a>
         </h3>
       </div>
