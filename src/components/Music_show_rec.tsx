@@ -58,28 +58,57 @@ export default function Music_show_rec() {
             </p>
           </div>
         </div>
-        <h2>Demo</h2>
-        <h2>GitHub Repository</h2>
-        <a
-          href="https://github.com/renashen314/recommend_music_events"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Link to GitHub Repo
-        </a>
+        <div className="button-wrapper">
+          <div className="rounded-button">
+            <a href="https://drive.google.com/file/d/1HkG9hyJAoCB_JFZ1tWIGBLs8GxgLW_ig/view">
+              Watch the Demo Here
+            </a>
+          </div>
+          <div className="rounded-button">
+            <div className="flex">
+              <img
+                src="https://skillicons.dev/icons?i=github"
+                alt="skill icons"
+                style={{
+                  width: "auto",
+                  height: "24px",
+                  paddingRight: "8px",
+                }}
+              />
+              <a
+                href="https://github.com/renashen314/recommend_music_events"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Repository
+              </a>
+            </div>
+          </div>
+        </div>
         <h2>Data Structure</h2>
         <p>
-          Using Spotify API search endpoint, the API will search for the artist
-          to get the id. Then, using the artist related artist request to
-          generate a list of 20 artists. From the response JSON, return list a
-          tuple [(artist1, [genre1, genre2,…]), (artist2, [genre1, genre2,…])]
-          To calculate the most related top 5 artists based on their genres, I
-          used the graph data structure. The nodes are the artists, and they are
+          The Spotify API <b>search endpoint</b> returns the artist's
+          information, including the <b>id</b>. Using the id and the artist
+          related artist end point, it returns a list of 20 artists. To
+          calculate the most related top 5 artists based on their genres, I used
+          the graph data structure. The nodes are the artists, and they are
           connected by an edge if they share the same genre. I calculated their
           similarity based on how many overlapping genres they have. Then, I
           ranked them based on similarity scores and returned the first five
           artists.
         </p>
+        <p>An example of artist data would look like the following code:</p>
+        <img
+          src="../../public/graph-example.png"
+          alt="a picture of graph diagram"
+        />
+        <p>
+          In diagram, each node is an artist, and each edge is a shared genre:
+        </p>
+        <img
+          src="../../public/artists-graph.png"
+          alt="a picture of sample graph data"
+        />
         <pre className="line-numbers">
           <code className="language-js">{`# build graph based on data
 def build_graph(data):
@@ -97,8 +126,13 @@ def build_graph(data):
                   graph.add_edge(artist1, artist2, weight=weight)
   return graph`}</code>
         </pre>
-        <h2>Caculate Similarity Scores</h2>
 
+        <h2>Caculate Similarity Scores</h2>
+        <p>
+          The similarity scores are calculated based on the Jaccard similarity
+          index of each artist. That index is the similarities of the sample
+          sets of two artists' genres.
+        </p>
         <pre className="line-numbers">
           <code className="language-js">{`def find_top_5_similar_artists(graph):
   similarities = {}
@@ -122,6 +156,10 @@ def build_graph(data):
   return unique_artists[:5]`}</code>
         </pre>
         <h2>Cache Session Keys</h2>
+        <p>
+          Using Flask session to cache access tokens up to an hour, it can
+          reduce the number of API requests and increase performance.
+        </p>
         <pre className="line-numbers">
           <code className="language-js">{`from flask import Flask, render_template, request, session, url_for, redirect, flash
 
@@ -136,7 +174,7 @@ def index():
         session["access_token"] = token
 ...`}</code>
         </pre>
-        <h2>How to use</h2>
+        <h2>Try it yourself!</h2>
         <p>
           To use this project, you will need to have a Spotify and Ticketmaster
           account. You can sign up for a Spotify account at{" "}

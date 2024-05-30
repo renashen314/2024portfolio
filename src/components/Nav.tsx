@@ -30,7 +30,7 @@ export default function Nav() {
       <h3>Python</h3>
       <ul>
         <li>
-          <Link to="/work">
+          <Link to="/media_dashboard">
             <span>&#128202;</span>Media Dashboard
           </Link>
         </li>

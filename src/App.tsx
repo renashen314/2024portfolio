@@ -7,6 +7,7 @@ import Music_show_rec from "./components/Music_show_rec";
 import NYC_PARK_MAP from "./components/NYC_PARK_MAP";
 import Uptap from "./components/Uptap";
 import { useEffect } from "react";
+import Media_Dashboard from "./components/Media_Dashboard";
 
 function App() {
   useEffect(() => {
@@ -24,10 +25,10 @@ function App() {
   }, []);
   return (
     <>
-      <div id="blob"></div>
-      <div id="blur"></div>
-      <Router>
-        <div className="app-container">
+      <div className="app-container">
+        <div id="blob"></div>
+        <div id="blur"></div>
+        <Router>
           <Nav />
           <Routes>
             <Route path="/" element={<Home />}></Route>
@@ -36,9 +37,10 @@ function App() {
             <Route path="/uptap" element={<Uptap />} />
             <Route path="/nyc_park_map" element={<NYC_PARK_MAP />} />
             <Route path="/music_show_rec" element={<Music_show_rec />} />
+            <Route path="/media_dashboard" element={<Media_Dashboard />} />
           </Routes>
-        </div>
-      </Router>
+        </Router>
+      </div>
     </>
   );
 }

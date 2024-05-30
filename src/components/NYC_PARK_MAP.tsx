@@ -3,31 +3,56 @@ export default function NYC_PARK_MAP() {
     <main className="flex">
       <section className="article">
         <h1>NYC Park Map</h1>
+        <h2>A GIS data visualization project.</h2>
         <p>
           As a type of urban intelligence, parks and community gardens are
           quintessential in the urban landscape that contribute significantly to
           the physical, social, and environmental health of the city and its
           residents. They support the well-being of city residents by providing
           an inclusive space for social activities and recreational
-          opportunities. Moreover, parks also serve as community centers,
-          hosting a variety of events and programs that foster community
-          engagement. <br />
+          opportunities. <br />
           In this project, the social infrastructure in the parks are measured
           by the facilities they provide. This project also aims to analyze the
           quality of Points of Interest (POI) data from a chosen public
           database, NYC Open Data Portal.
         </p>
-        <a
-          href="https://renashen314.github.io/NYC-Park-Map/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            fontSize: "1.5rem",
-            textDecoration: "underline",
-          }}
-        >
-          Park Map Demo
-        </a>
+        <div className="button-wrapper">
+          <div className="rounded-button">
+            <a
+              href="https://renashen314.github.io/NYC-Park-Map/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Park Map Live Demo
+            </a>
+          </div>
+          <div className="rounded-button">
+            <div className="flex">
+              <img
+                src="https://skillicons.dev/icons?i=github"
+                alt="skill icons"
+                style={{
+                  width: "auto",
+                  height: "24px",
+                  paddingRight: "8px",
+                }}
+              />
+              <a
+                href="https://github.com/renashen314/nyc-park-map"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub Repository
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="../../public/nyc-map-image.png"
+            alt="an image of nyc map with parks highlighted"
+          />
+        </div>
         <h2>Map interpretation</h2>
         <p>
           The interactive web map visualizes geographic data obtained from NYC
