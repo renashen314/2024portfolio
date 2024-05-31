@@ -5,7 +5,10 @@ export default function About() {
         <section className="article">
           <h1>About</h1>
           <div className="flex">
-            <div className="image-placeholder">Image Placeholder</div>
+            <div className="image-placeholder">
+              Image Placeholder
+              <img src="" alt="A picture of Rena" />
+            </div>
             <p>
               From the creative industry to the fast evolving technology world,
               Rena Shen has successfully transitioned into frontend development,

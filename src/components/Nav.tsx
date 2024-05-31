@@ -36,7 +36,7 @@ export default function Nav() {
         </li>
         <li>
           <Link to="/music_show_rec">
-            <span>&#127878;</span>Music Show Recommendation
+            <span>&#127878;</span>Concert Recommender
           </Link>
         </li>
       </ul>

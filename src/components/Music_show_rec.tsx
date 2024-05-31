@@ -12,8 +12,8 @@ export default function Music_show_rec() {
   return (
     <main className="flex">
       <section className="article">
-        <h1>Music Event Recommendation</h1>
-        <h2>Generate related artists and recommend upcoming music events</h2>
+        <h1>Concert Recommender</h1>
+        <h2>Generate related artists and recommend upcoming concerts</h2>
         <h2>Overview</h2>
         <p>
           This project utilizes the Spotify and Ticketmaster APIs to recommend
@@ -133,6 +133,7 @@ def build_graph(data):
           index of each artist. That index is the similarities of the sample
           sets of two artists' genres.
         </p>
+        <p>The function returns top 5 most similar and unique artists</p>
         <pre className="line-numbers">
           <code className="language-js">{`def find_top_5_similar_artists(graph):
   similarities = {}

@@ -14,7 +14,7 @@ function App() {
     const blob = document.getElementById("blob");
     document.body.onpointermove = (e) => {
       const { clientX, clientY } = e;
-      blob.animate(
+      blob?.animate(
         {
           left: `${clientX}px`,
           top: `${clientY}px`,
@@ -25,21 +25,24 @@ function App() {
   }, []);
   return (
     <>
-      <div className="app-container">
-        <div id="blob"></div>
-        <div id="blur"></div>
-        <Router>
-          <Nav />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/about" element={<About />} />
-            <Route path="/notebook" element={<NOTEBOOK />} />
-            <Route path="/uptap" element={<Uptap />} />
-            <Route path="/nyc_park_map" element={<NYC_PARK_MAP />} />
-            <Route path="/music_show_rec" element={<Music_show_rec />} />
-            <Route path="/media_dashboard" element={<Media_Dashboard />} />
-          </Routes>
-        </Router>
+      <div>
+        <div className="app-container">
+          <div id="blob"></div>
+          <div id="blur"></div>
+          <Router>
+            <Nav />
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/about" element={<About />} />
+              <Route path="/notebook" element={<NOTEBOOK />} />
+              <Route path="/uptap" element={<Uptap />} />
+              <Route path="/nyc_park_map" element={<NYC_PARK_MAP />} />
+              <Route path="/music_show_rec" element={<Music_show_rec />} />
+              <Route path="/media_dashboard" element={<Media_Dashboard />} />
+            </Routes>
+          </Router>
+        </div>
+        <footer>copyright © 2024 Rena Shen, all rights reserved</footer>
       </div>
     </>
   );
