@@ -51,10 +51,11 @@ nav a:hover {
   background-color: var(--hover-hightlight-color);
 }
 footer {
-  /* display: flex; */
-  /* position: relative; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  background-color: inherit;
+  padding: 0.5rem 0;
 }
 .grid-col-2 {
   display: grid;
@@ -100,6 +101,7 @@ footer {
   margin: 0 auto;
   padding: 0 20px;
   height: 100%;
+  overflow: scroll;
 }
 .page-container {
   display: flex;

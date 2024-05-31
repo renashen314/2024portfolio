@@ -42,7 +42,10 @@ function App() {
             </Routes>
           </Router>
         </div>
-        <footer>copyright © 2024 Rena Shen, all rights reserved</footer>
+        <footer>
+          <p>Copyright © 2024 Rena Shen</p>
+          <p>All rights reserved</p>{" "}
+        </footer>
       </div>
     </>
   );
