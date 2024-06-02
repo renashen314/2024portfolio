@@ -101,7 +101,6 @@ footer {
   margin: 0 auto;
   padding: 0 20px;
   height: 100%;
-  overflow: scroll;
 }
 .page-container {
   display: flex;

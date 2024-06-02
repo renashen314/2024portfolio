@@ -98,17 +98,11 @@ export default function Music_show_rec() {
           artists.
         </p>
         <p>An example of artist data would look like the following code:</p>
-        <img
-          src="../../public/graph-example.png"
-          alt="a picture of graph diagram"
-        />
+        <img src="/graph-example.png" alt="a picture of graph diagram" />
         <p>
           In diagram, each node is an artist, and each edge is a shared genre:
         </p>
-        <img
-          src="../../public/artists-graph.png"
-          alt="a picture of sample graph data"
-        />
+        <img src="/artists-graph.png" alt="a picture of sample graph data" />
         <pre className="line-numbers">
           <code className="language-js">{`# build graph based on data
 def build_graph(data):
