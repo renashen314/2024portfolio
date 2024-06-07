@@ -45,9 +45,9 @@ export default function Nav() {
       </div>
       <ul>
         <li>
-          <Link to="/work">
+          {/* <Link to="/work">
             <span>&#128193;</span>Dev Team Project Management
-          </Link>
+          </Link> */}
         </li>
       </ul>
       <h3 className="big-nav-button">

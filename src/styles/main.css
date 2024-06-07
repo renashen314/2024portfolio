@@ -183,14 +183,19 @@ code {
 .image-placeholder {
   flex: 1 0 auto;
   width: 400px; /* Set the desired width */
-  height: 400px; /* Set the desired height */
-  background-color: #ccc; /* Light grey background color */
+  height: auto; /* Set the desired height */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #888; /* Text color for the placeholder text */
   font-size: 16px;
   font-family: Arial, sans-serif;
+}
+.image-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.about-content {
+  gap: 40px;
 }
 /* fancy text styles */
 #text {

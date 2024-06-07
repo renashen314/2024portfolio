@@ -4,16 +4,23 @@ export default function About() {
       <main className="flex">
         <section className="article">
           <h1>About</h1>
-          <div className="flex">
+          <div className="flex about-content">
             <div className="image-placeholder">
-              Image Placeholder
-              <img src="" alt="A picture of Rena" />
+              <img src="public/IMG_6844.JPG" alt="A picture of Rena" />
             </div>
             <p>
               From the creative industry to the fast evolving technology world,
               Rena Shen has successfully transitioned into frontend development,
-              recently earning her master's degree in Information from the
+              recently earned her master's degree in Information from the
               University of Michigan, School of Information.
+              <br />
+              Rena is currently an <b>Engineering Manager</b> at{" "}
+              <i>The Michigan Daily,</i> as well as <b>.NET developer</b> at the{" "}
+              <i>University of Michigan, LSA Technology Services.</i> During her
+              time at the universiy, she <b>co-instructed</b> introductory
+              python course at the <i>School of Information.</i> In the
+              meantime, she built many softwares and web applications with
+              teams.
               <br />
               Rena is dedicated to delivering high-quality UX solutions that
               align with the business goals. She is a self-motivated and
@@ -24,16 +31,13 @@ export default function About() {
               team. She dedicates time to mentoring her junior teammates,
               believing that the team's growth is essential for optimal
               performance and delivering value to end users.
-              <br />
-              Aside from profesional pursuits, Rena enjoys birding(A.K.A adult
-              Pokemon), hiking, and build miniatures.
             </p>
           </div>
           <div>
             <h2>Language/Framework</h2>
             <a href="https://skillicons.dev">
               <img
-                src="https://skillicons.dev/icons?i=react,python,typescript,javascript,nodejs,vuejs,tailwind,rails,ruby,r"
+                src="https://skillicons.dev/icons?i=react,python,typescript,javascript,nodejs,vuejs,tailwind,rails,ruby,r,cs,dotnet"
                 alt="skill icons"
               />
             </a>
