@@ -6,7 +6,7 @@ export default function About() {
           <h1>About</h1>
           <div className="flex about-content">
             <div className="image-placeholder">
-              <img src="public/IMG_6844.JPG" alt="A picture of Rena" />
+              <img src="/IMG_6844.JPG" alt="A picture of Rena" />
             </div>
             <p>
               From the creative industry to the fast evolving technology world,

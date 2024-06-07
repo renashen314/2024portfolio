@@ -49,7 +49,7 @@ export default function NYC_PARK_MAP() {
         </div>
         <div>
           <img
-            src="../../public/nyc-map-image.png"
+            src="/nyc-map-image.png"
             alt="an image of nyc map with parks highlighted"
           />
         </div>
