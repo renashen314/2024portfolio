@@ -6,6 +6,7 @@ import NOTEBOOK from "./components/NOTEBOOK";
 import Music_show_rec from "./components/Music_show_rec";
 import NYC_PARK_MAP from "./components/NYC_PARK_MAP";
 import Uptap from "./components/Uptap";
+import Publication from "./components/Publication";
 import { useEffect } from "react";
 import Media_Dashboard from "./components/Media_Dashboard";
 
@@ -39,6 +40,7 @@ function App() {
               <Route path="/nyc_park_map" element={<NYC_PARK_MAP />} />
               <Route path="/music_show_rec" element={<Music_show_rec />} />
               <Route path="/media_dashboard" element={<Media_Dashboard />} />
+              <Route path="/publication" element={<Publication />} />
             </Routes>
           </Router>
         </div>

@@ -38,10 +38,6 @@ h3 {
   font-size: 1.25rem;
   padding: 1.25rem 0 0 0;
 }
-.article p {
-  font-size: 1.25rem;
-  line-height: 1.6;
-}
 
 a {
   text-decoration: underline;
@@ -105,22 +101,29 @@ footer {
 .page-container {
   display: flex;
 }
+
+.article {
+  flex: 1 0 auto;
+  padding: 8rem 40px 8rem 40px;
+  max-width: 90%;
+  text-align: left;
+  line-height: 1.5;
+  justify-content: flex-start;
+  align-items: center;
+}
+.article p {
+  font-size: 1.25rem;
+  line-height: 2;
+}
+.article img {
+  max-width: 70vw;
+  height: auto;
+}
 h3 img {
   vertical-align: middle; /* Align the image vertically with the text */
   margin-right: 8px; /* Space between the image and the text */
   width: 24px; /* Set a specific width for the image */
   height: auto; /* Maintain the aspect ratio */
-}
-.article {
-  flex: 1 0 auto;
-  padding: 8rem 40px 20px 40px;
-  margin-left: auto;
-  margin-right: 0;
-  width: 70%;
-  text-align: left;
-  line-height: 1.5;
-  justify-content: flex-start;
-  align-items: center;
 }
 .main-content {
   display: flex;
@@ -157,6 +160,7 @@ h3 img {
 }
 .navbar .big-nav-button a {
   padding-left: 0;
+  text-decoration: underline;
 }
 
 .external-link a {

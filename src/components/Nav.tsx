@@ -40,20 +40,13 @@ export default function Nav() {
           </Link>
         </li>
       </ul>
-      <div className="flex">
-        <h3>Ruby on Rails</h3>
-      </div>
-      <ul>
-        <li>
-          {/* <Link to="/work">
-            <span>&#128193;</span>Dev Team Project Management
-          </Link> */}
-        </li>
-      </ul>
+      <h3 className="big-nav-button">
+        <Link to="/publication">Publication</Link>
+      </h3>
       <h3 className="big-nav-button">
         <Link to="/about">About me</Link>
       </h3>
-      <div className="external-link">
+      <div className="big-nav-button">
         <h3>
           <a
             href="https://www.linkedin.com/in/rena-shen-3aa321149/"
