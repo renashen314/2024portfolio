@@ -145,38 +145,19 @@ h3 img {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0 24px;
+  gap: 4px;
   min-height: 60px;
 }
 
-.navbar h3,
-.navbar .big-nav-button {
-  margin: 0 16px 0 0;
+.navbar h3 {
   padding: 0;
-  font-size: 1.1rem;
-  display: inline-block;
-}
-
-.navbar ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 16px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.navbar li {
-  display: inline-block;
-  margin: 0 8px;
+  font-size: 1rem;
 }
 
 .navbar a {
-  font-size: 1.1rem;
-  display: inline-block;
-  padding: 10px 12px;
   text-decoration: none;
-  border-radius: 4px;
+  padding: 10px;
+  border-radius: 20px;
   transition: background 0.2s;
 }
 
@@ -184,26 +165,6 @@ h3 img {
   background: var(--hover-hightlight-color);
 }
 
-.navbar .big-nav-button {
-  font-weight: bold;
-}
-
-.external-link a {
-  padding-left: 0;
-}
-
-/* styles for code */
-pre {
-  max-width: 100%;
-  overflow-x: auto;
-  white-space: pre-wrap; /* Wrap long lines */
-  word-wrap: break-word; /* Break long words */
-}
-
-code {
-  display: block;
-  max-width: 100%;
-}
 .image-placeholder {
   flex: 1 0 auto;
   width: 400px; /* Set the desired width */
@@ -364,7 +325,7 @@ code {
   }
 }
 
-/* Single Page Scroll Styles */
+/* Scroll Styles */
 .home-section,
 .about-section {
   min-height: 85vh;
@@ -444,5 +405,137 @@ code {
   }
   .navbar li {
     margin: 0 0 4px 0;
+  }
+}
+
+/* Project Section Grid Background */
+.project-section-bg {
+  background: repeating-linear-gradient(
+      to right,
+      rgba(255,255,255) 0px,
+      rgba(255,255,255) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255) 0px,
+      rgba(255,255,255) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  padding: 40px 0 80px 0;
+  min-height: 100vh;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 52px 0 80px 0;
+}
+
+@media (max-width: 1100px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Project Card */
+.project-card {
+  background: rgba(255,255,255,0.13);
+  border-radius: 28px;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  max-width: 370px;
+  min-height: 540px;
+  position: relative;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.22);
+}
+
+/* Image Placeholder */
+.project-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #555;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.92) grayscale(0.08);
+}
+
+
+.project-tech-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.tech-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #222;
+  border: 2.5px solid #fff;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);
+  position: relative;
+}
+
+/* Example colors for tech icons */
+.tech-typescript { background: #3178c6; }
+.tech-react { background: #61dafb; }
+.tech-figma { background: #a259ff; }
+.tech-nodejs { background: #3c873a; }
+.tech-html5 { background: #e44d26; }
+.tech-css3 { background: #1572b6; }
+
+/* Deploy Status Row */
+.project-status-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: auto;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .project-card {
+    min-width: 90vw;
+    max-width: 98vw;
   }
 }

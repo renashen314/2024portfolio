@@ -2,8 +2,8 @@ export default function About() {
   return (
     <div>
   
-        <section className="section-container">
-          <h2>About</h2>
+        <section id="experience-section" className="section-container">
+          <h2>Experience</h2>
           <div className="flex about-content">
             <div className="image-placeholder">
               <img src="/IMG_6844.JPG" alt="A picture of Rena" />

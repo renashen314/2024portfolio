@@ -12,9 +12,9 @@ export default function Nav() {
     e.preventDefault();
     scrollToSection('project-section');
   };
-  const handleAboutClick = (e: React.MouseEvent) => {
+  const handleExperienceClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    scrollToSection('about-section');
+    scrollToSection('experience-section');
   };
 
   return (
@@ -23,10 +23,10 @@ export default function Nav() {
         <a href="/">Home</a>
       </h3>
       <h3 className="big-nav-button">
-        <Link to="/project">Projects</Link>
+      <a href="#" onClick={handleProjectClick}>Projects</a>
       </h3>
       <h3 className="big-nav-button">
-        <a href="#" onClick={handleAboutClick}>Experience</a>
+        <a href="#" onClick={handleExperienceClick}>Experience</a>
       </h3>
       <h3 className="big-nav-button">
         <Link to="/publication">Publication</Link>
