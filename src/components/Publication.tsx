@@ -1,7 +1,7 @@
 export default function Publication() {
   return (
     <main className="flex">
-      <section className="article">
+      <section className="section-container">
         <h1>Publication Websites</h1>
         <p>Websites pushlished during my time at The Michigan Daily</p>
         <div>

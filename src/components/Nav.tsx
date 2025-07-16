@@ -1,12 +1,48 @@
 import { Link } from "react-router-dom";
 
 export default function Nav() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleProjectClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToSection('project-section');
+  };
+  const handleAboutClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToSection('about-section');
+  };
+
   return (
     <nav className="navbar">
       <h3 className="big-nav-button">
-        <Link to="/">Home</Link>
+        <a href="/">Home</a>
       </h3>
-      <h3>React & JS</h3>
+      <h3 className="big-nav-button">
+        <Link to="/project">Projects</Link>
+      </h3>
+      <h3 className="big-nav-button">
+        <a href="#" onClick={handleAboutClick}>Experience</a>
+      </h3>
+      <h3 className="big-nav-button">
+        <Link to="/publication">Publication</Link>
+      </h3>
+      <div className="big-nav-button">
+        <h3>
+          <a
+            href="https://www.linkedin.com/in/rena-shen-3aa321149/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn <span>&#10132;</span>
+          </a>
+        </h3>
+      </div>
+      {/* <h3>React & JS</h3>
       <ul>
         <li>
           <Link to="/notebook">
@@ -39,24 +75,8 @@ export default function Nav() {
             <span>&#127878;</span>Concert Recommender
           </Link>
         </li>
-      </ul>
-      <h3 className="big-nav-button">
-        <Link to="/publication">Publication</Link>
-      </h3>
-      <h3 className="big-nav-button">
-        <Link to="/about">About me</Link>
-      </h3>
-      <div className="big-nav-button">
-        <h3>
-          <a
-            href="https://www.linkedin.com/in/rena-shen-3aa321149/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn <span>&#10132;</span>
-          </a>
-        </h3>
-      </div>
+      </ul> */}
+
     </nav>
   );
 }

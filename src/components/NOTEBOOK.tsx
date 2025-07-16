@@ -1,7 +1,7 @@
 export default function Work() {
   return (
     <main className="flex">
-      <section className="article">
+      <section className="section-container">
         <h1>Markdown Notebook</h1>
         <h2>
           An note-taking application with markdown support. Built with React,

@@ -11,7 +11,7 @@ export default function Music_show_rec() {
   }, []);
   return (
     <main className="flex">
-      <section className="article">
+      <section className="section-container">
         <h1>Concert Recommender</h1>
         <h2>Generate related artists and recommend upcoming concerts</h2>
         <h2>Overview</h2>

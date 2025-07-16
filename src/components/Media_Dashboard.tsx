@@ -1,7 +1,7 @@
 export default function Media_Dashboard() {
   return (
     <main className="flex">
-      <section className="article">
+      <section className="section-container">
         <div>
           <h1>Media Dashboard</h1>
           <p>

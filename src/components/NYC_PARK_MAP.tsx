@@ -1,7 +1,7 @@
 export default function NYC_PARK_MAP() {
   return (
     <main className="flex">
-      <section className="article">
+      <section className="section-container">
         <h1>NYC Park Map</h1>
         <h2>A GIS data visualization project.</h2>
         <p>

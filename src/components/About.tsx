@@ -1,14 +1,15 @@
 export default function About() {
   return (
     <div>
-      <main className="flex">
-        <section className="article">
-          <h1>About</h1>
+  
+        <section className="section-container">
+          <h2>About</h2>
           <div className="flex about-content">
             <div className="image-placeholder">
               <img src="/IMG_6844.JPG" alt="A picture of Rena" />
             </div>
             <p>
+              NYC based Developer.
               From the creative industry to the fast evolving technology world,
               Rena Shen has successfully transitioned into frontend development,
               recently earned her master's degree in Information from the
@@ -34,7 +35,7 @@ export default function About() {
             </p>
           </div>
           <div>
-            <h2>Language/Framework</h2>
+            <h3>Language/Framework</h3>
             <a href="https://skillicons.dev">
               <img
                 src="https://skillicons.dev/icons?i=react,python,typescript,javascript,nodejs,vuejs,tailwind,rails,ruby,r,cs,dotnet"
@@ -43,7 +44,7 @@ export default function About() {
             </a>
           </div>
           <div>
-            <h2>Database/Backend</h2>
+            <h3>Database/Backend</h3>
             <a href="https://skillicons.dev">
               <img
                 src="https://skillicons.dev/icons?i=nodejs,firebase,mongodb,git,mysql,postgres,nextjs"
@@ -52,7 +53,7 @@ export default function About() {
             </a>
           </div>
         </section>
-      </main>
+
     </div>
   );
 }

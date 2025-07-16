@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/About";
 import Nav from "./components/Nav";
 import NOTEBOOK from "./components/NOTEBOOK";
 import Music_show_rec from "./components/Music_show_rec";
@@ -34,7 +33,6 @@ function App() {
             <Nav />
             <Routes>
               <Route path="/" element={<Home />}></Route>
-              <Route path="/about" element={<About />} />
               <Route path="/notebook" element={<NOTEBOOK />} />
               <Route path="/uptap" element={<Uptap />} />
               <Route path="/nyc_park_map" element={<NYC_PARK_MAP />} />
@@ -45,7 +43,7 @@ function App() {
           </Router>
         </div>
         <footer>
-          <p>Copyright © 2024 Rena Shen</p>
+          <p>Copyright © 2025 Rena Shen</p>
           <p>All rights reserved</p>{" "}
         </footer>
       </div>

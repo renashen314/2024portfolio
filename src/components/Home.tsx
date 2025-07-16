@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import About from "./About";
+import Projects from "./Projects";
 
 export default function Home() {
   const rand = (min: number, max: number) =>
@@ -29,6 +31,14 @@ export default function Home() {
       });
     }
   };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const location = useLocation();
   useEffect(() => {
     if (location.pathname === "/") {
@@ -41,49 +51,63 @@ export default function Home() {
   return (
     <>
       <main className="main-content">
-        <div id="text">
-          <div className="line">
-            <p className="offset-word">Rena</p>
-            <p className="offset-word">Shen</p>
+        {/* Home Section */}
+        <section id="home-section" className="home-section">
+          <div id="text">
+            <div className="line">
+              <p className="offset-word">Rena</p>
+              <p className="offset-word">Shen</p>
+            </div>
+            <div className="line">
+              <p className="offset-word highlight">Frontend</p>
+              <p className="offset-word highlight">&</p>
+            </div>
+            <div className="line">
+              <p className="offset-word highlight">software development</p>
+            </div>
+            <div className="line">
+              <a
+                id="homepage-email"
+                className="offset-word fancy"
+                href="mailto:renashen@umich.edu"
+              >
+                renashen@umich.edu
+              </a>
+              <span className="offset-word">&#9786;</span>
+            </div>
+            <div className="line">
+              <a
+                id="github-link"
+                className="offset-word fancy"
+                href="https://github.com/renashen314"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>&#10132;</span>Github
+              </a>
+              <a
+                id="medium-link"
+                className="offset-word fancy"
+                href="https://medium.com/@renashen_28351"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>&#10132;</span>Medium
+              </a>
+            </div>
           </div>
-          <div className="line">
-            <p className="offset-word highlight">Frontend</p>
-            <p className="offset-word highlight">&</p>
-          </div>
-          <div className="line">
-            <p className="offset-word highlight">software development</p>
-          </div>
-          <div className="line">
-            <a
-              id="homepage-email"
-              className="offset-word fancy"
-              href="mailto:renashen@umich.edu"
+          <div className="scroll-indicator">
+            <button 
+              onClick={() => scrollToSection('project-section')}
+              className="scroll-button"
             >
-              renashen@umich.edu
-            </a>
-            <span className="offset-word">&#9786;</span>
+              Get to know Me ↓
+            </button>
           </div>
-          <div className="line">
-            <a
-              id="github-link"
-              className="offset-word fancy"
-              href="https://github.com/renashen314"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>&#10132;</span>Github
-            </a>
-            <a
-              id="medium-link"
-              className="offset-word fancy"
-              href="https://medium.com/@renashen_28351"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>&#10132;</span>Medium
-            </a>
-          </div>
-        </div>
+        </section>
+        {/* Project Section */}
+        <Projects />
+        <About />
       </main>
     </>
   );

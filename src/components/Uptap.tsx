@@ -1,7 +1,7 @@
 export default function Uptap() {
   return (
     <main className="flex">
-      <section className="article">
+      <section className="section-container">
         <h1>Uptap</h1>
         <h2>Sharing and storing contacts has never been easier.</h2>
         <p>
