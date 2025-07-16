@@ -19,6 +19,19 @@ const projects = [
     status: 'offline',
     note: '(under development)'
   },
+  {
+    title: 'placeholder1',
+    description: 'Web-based productivity collection',
+    image: 'https://placehold.co/600x600', 
+    tech: ['typescript', 'react', 'figma'],
+  },
+  {
+    title: 'placeholder2',
+    description: 'Generate your character in the next Advanture!',
+    image: 'https://placehold.co/600x600', 
+    tech: ['react', 'typescript', 'nodejs'],
+  },
+
 ];
 
 const Projects = () => {
