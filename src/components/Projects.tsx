@@ -10,6 +10,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Multi-tenant Ecommerence App",
+    description: "A gumroad mockup, with payment and multi tenancy",
+    image: "https://placehold.co/600x600",
+    url: "",
+    tech: ["react query", "typescript", "payload", "stripe", "tailwindcss"],
+    status: "offline",
+    note: "(under development)",
+  },
+  {
     title: "Ordinary Things",
     description: "Web-based productivity collection",
     url: "",
@@ -18,7 +27,8 @@ const projects: Project[] = [
   },
   {
     title: "Concert Finder",
-    description: "Web-based productivity collection",
+    description:
+      "Provides concert recommendations based on your favorate artist",
     url: "https://github.com/renashen314/recommend_music_events",
     image: "public/ordinary-things.png",
     tech: ["Python", "react", "Oath2.0"],
@@ -28,6 +38,14 @@ const projects: Project[] = [
     description: "Generate your character in the next Adventure!",
     image: "https://placehold.co/600x600",
     tech: ["react", "typescript", "nodejs"],
+    url: "",
+  },
+
+  {
+    title: "Uptap",
+    description: "Share your customized business card!",
+    image: "https://placehold.co/600x600",
+    tech: ["react native", "firestore", "Expo", "nodejs"],
     url: "",
   },
   {
