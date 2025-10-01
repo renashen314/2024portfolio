@@ -1,52 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { useLocation } from "react-router-dom";
-import About from "./About";
 import Projects from "./Projects";
+import Contact from "./Contact";
+import { useTextEnhancement } from "../hooks/useTextEnhancement";
+import Experience from "./Experience";
 
 export default function Home() {
-  const rand = (min: number, max: number) =>
-    Math.floor(Math.random() * (max - min + 1)) + min;
-  const enhance = (id: string): void => {
-    const element = document.getElementById(id);
-    if (element) {
-      const text = element.innerText.split("");
-      element.innerText = "";
+  const githubRef = useRef<HTMLAnchorElement>(null);
+  const mediumRef = useRef<HTMLAnchorElement>(null);
+  const emailRef = useRef<HTMLAnchorElement>(null);
 
-      text.forEach((letter, index) => {
-        const outer = document.createElement("span");
-        outer.className = "outer";
+  const enhance = useTextEnhancement();
 
-        const inner = document.createElement("span");
-        inner.className = "inner";
-        inner.style.animationDelay = `${rand(-5000, 0)}ms`;
-
-        const span = document.createElement("span");
-        span.className = "letter";
-        span.innerText = letter;
-        span.style.animationDelay = `${index * 1000}ms`;
-
-        inner.appendChild(span);
-        outer.appendChild(inner);
-        element.appendChild(outer);
-      });
-    }
-  };
-
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = useCallback((sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  };
+  }, []);
 
   const location = useLocation();
   useEffect(() => {
     if (location.pathname === "/") {
-      enhance("github-link");
-      enhance("medium-link");
-      enhance("homepage-email");
+      if (githubRef.current) enhance(githubRef.current);
+      if (mediumRef.current) enhance(mediumRef.current);
+      if (emailRef.current) enhance(emailRef.current);
     }
-  }, [location.pathname]);
+  }, [location.pathname, enhance]);
 
   return (
     <>
@@ -67,7 +47,7 @@ export default function Home() {
             </div>
             <div className="line">
               <a
-                id="homepage-email"
+                ref={emailRef}
                 className="offset-word fancy"
                 href="mailto:renashen@umich.edu"
               >
@@ -77,7 +57,7 @@ export default function Home() {
             </div>
             <div className="line">
               <a
-                id="github-link"
+                ref={githubRef}
                 className="offset-word fancy"
                 href="https://github.com/renashen314"
                 target="_blank"
@@ -86,7 +66,7 @@ export default function Home() {
                 <span>&#10132;</span>Github
               </a>
               <a
-                id="medium-link"
+                ref={mediumRef}
                 className="offset-word fancy"
                 href="https://medium.com/@renashen_28351"
                 target="_blank"
@@ -97,17 +77,17 @@ export default function Home() {
             </div>
           </div>
           <div className="scroll-indicator">
-            <button 
-              onClick={() => scrollToSection('project-section')}
+            <button
+              onClick={() => scrollToSection("experience-section")}
               className="scroll-button"
             >
               Get to know Me ↓
             </button>
           </div>
         </section>
-        {/* Project Section */}
+        <Experience />
         <Projects />
-        <About />
+        <Contact />
       </main>
     </>
   );

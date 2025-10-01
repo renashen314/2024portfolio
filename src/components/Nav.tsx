@@ -4,32 +4,48 @@ export default function Nav() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const handleProjectClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    scrollToSection('project-section');
+    scrollToSection("project-section");
   };
   const handleExperienceClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    scrollToSection('experience-section');
+    scrollToSection("experience-section");
+  };
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToSection("home-section");
+  };
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    scrollToSection("contact-section");
   };
 
   return (
     <nav className="navbar">
       <h3 className="big-nav-button">
-        <a href="/">Home</a>
+        <Link to="/" onClick={handleHomeClick}>
+          Home
+        </Link>
       </h3>
       <h3 className="big-nav-button">
-      <a href="#" onClick={handleProjectClick}>Projects</a>
+        <Link to="/" onClick={handleExperienceClick}>
+          Experience
+        </Link>
       </h3>
       <h3 className="big-nav-button">
-        <a href="#" onClick={handleExperienceClick}>Experience</a>
+        <Link to="/" onClick={handleProjectClick}>
+          Projects
+        </Link>
       </h3>
       <h3 className="big-nav-button">
-        <Link to="/publication">Publication</Link>
+        <Link to="/publication" onClick={handleContactClick}>
+          Contact
+        </Link>
       </h3>
       <div className="big-nav-button">
         <h3>
@@ -42,41 +58,6 @@ export default function Nav() {
           </a>
         </h3>
       </div>
-      {/* <h3>React & JS</h3>
-      <ul>
-        <li>
-          <Link to="/notebook">
-            <span>&#128210;</span>Markdown Notebook
-          </Link>
-        </li>
-        <li>
-          <Link to="/nyc_park_map">
-            <span>&#128510;</span>NYC Park Map
-          </Link>
-        </li>
-      </ul>
-      <h3>React Native</h3>
-      <ul>
-        <li>
-          <Link to="/uptap">
-            <span>&#128199;</span>Uptap
-          </Link>
-        </li>
-      </ul>
-      <h3>Python</h3>
-      <ul>
-        <li>
-          <Link to="/media_dashboard">
-            <span>&#128202;</span>Media Dashboard
-          </Link>
-        </li>
-        <li>
-          <Link to="/music_show_rec">
-            <span>&#127878;</span>Concert Recommender
-          </Link>
-        </li>
-      </ul> */}
-
     </nav>
   );
 }
