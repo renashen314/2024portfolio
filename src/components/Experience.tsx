@@ -45,6 +45,7 @@ export default function Experience() {
         <div className="experience-section">
           <p>
             I am a <span>NYC based</span> developer with
+            <br />
             <span>3 years</span> of experience as a coding enthusiast, and
             <span>1.5 years</span> as a professional frontend developer.
           </p>
